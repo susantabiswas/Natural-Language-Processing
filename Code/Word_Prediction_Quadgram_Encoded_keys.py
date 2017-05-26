@@ -83,7 +83,7 @@ def decodeKey(s,vocab_dict):
 #returns : void
 #arg: string,dict,dict,dict,list
 #loads the corpus for the dataset and makes the frequency count of quadgram and trigram strings
-def loadCorupus(filename,tri_dict,quad_dict,vocab_dict,index):
+def loadCorpus(filename,tri_dict,quad_dict,vocab_dict,index):
     w1 = ''    #for storing the 3rd last word to be used for next token set
     w2 = ''    #for storing the 2nd last word to be used for next token set
     w3 = ''    #for storing the last word to be used for next token set
@@ -218,7 +218,7 @@ def main():
     vocab_dict = OrderedDict()   #for mapping of words with their index ==> key:word value:index of key in dict\n",
     index = [0]   #list for assigning index value to keys\n",
 
-    loadCorupus('mycorpus.txt',tri_dict,quad_dict,vocab_dict,index)
+    loadCorpus('mycorpus.txt',tri_dict,quad_dict,vocab_dict,index)
 
     cond = False
     #take input
